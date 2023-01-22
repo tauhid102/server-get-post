@@ -25,7 +25,7 @@ async function run() {
             const buy = await cursor.toArray();
             res.json(buy);
         });
-        //save name
+        //save user
         app.post('/save_user', async (req, res) => {
             const cursor = req.body;
             const result = await userCollection.insertOne(cursor);
